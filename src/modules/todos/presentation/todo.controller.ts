@@ -19,10 +19,10 @@ import {
   Patch,
   Post,
 } from '@nestjs/common';
-import { CreateTodoUseCase } from '../application/create-todo.use-case';
-import { DeleteTodoUseCase } from '../application/delete-todo.use-case';
-import { ListTodosUseCase } from '../application/list-todos.use-case';
-import { UpdateTodoUseCase } from '../application/update-todo.use-case';
+import { CreateTodoUseCase } from '../use-cases/create-todo.use-case';
+import { DeleteTodoUseCase } from '../use-cases/delete-todo.use-case';
+import { ListTodosUseCase } from '../use-cases/list-todos.use-case';
+import { UpdateTodoUseCase } from '../use-cases/update-todo.use-case';
 import { CreateTodoDto } from './dto/create-todo.dto';
 import { UpdateTodoDto } from './dto/update-todo.dto';
 

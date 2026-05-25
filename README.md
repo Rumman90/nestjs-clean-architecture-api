@@ -24,7 +24,7 @@ src/
   main.ts
   modules/
     todos/
-      application/
+      use-cases/
         create-todo.use-case.ts
         delete-todo.use-case.ts
         list-todos.use-case.ts
@@ -49,7 +49,7 @@ test/
 The Todo module is split into a few folders:
 
 - `domain` has the Todo model and the repository contract.
-- `application` has the use cases, such as creating, listing, updating, and deleting todos.
+- `use-cases` has the actions this module supports, such as creating, listing, updating, and deleting todos.
 - `repositories` has the current repository implementation. Right now it keeps data in memory.
 - `presentation` has the HTTP controller and DTOs.
 
