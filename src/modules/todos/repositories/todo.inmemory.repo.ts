@@ -7,7 +7,7 @@ export class InMemoryTodoRepository implements ITodoRepository {
   private todos: Todo[] = [];
 
   async findAll(): Promise<Todo[]> {
-    return this.todos;
+    return [...this.todos];
   }
 
   async findById(id: string): Promise<Todo | null> {
@@ -19,13 +19,17 @@ export class InMemoryTodoRepository implements ITodoRepository {
     return todo;
   }
 
-  async update(todo: Todo): Promise<Todo> {
+  async update(todo: Todo): Promise<Todo | null> {
     const idx = this.todos.findIndex(t => t.id === todo.id);
+    if (idx === -1) return null;
+
     this.todos[idx] = todo;
     return todo;
   }
 
-  async delete(id: string): Promise<void> {
+  async delete(id: string): Promise<boolean> {
+    const initialCount = this.todos.length;
     this.todos = this.todos.filter(t => t.id !== id);
+    return this.todos.length < initialCount;
   }
 }

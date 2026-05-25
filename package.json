@@ -1,18 +1,33 @@
 {
   "name": "nestjs-clean-architecture-api",
   "version": "1.0.0",
+  "description": "A small NestJS REST API that demonstrates clean architecture with a Todo module.",
+  "license": "MIT",
+  "author": "Rumman Hussain Siddiqui",
   "scripts": {
+    "build": "nest build",
     "start": "nest start",
-    "start:dev": "nest start --watch"
+    "start:dev": "nest start --watch",
+    "start:prod": "node dist/main.js",
+    "test": "npm run build && node --test test/*.test.js"
   },
+  "keywords": [
+    "nestjs",
+    "clean-architecture",
+    "rest-api",
+    "typescript",
+    "starter"
+  ],
   "dependencies": {
     "@nestjs/common": "^10.0.0",
     "@nestjs/core": "^10.0.0",
     "@nestjs/platform-express": "^10.0.0",
-    "class-validator": "^0.14.0",
+    "@nestjs/swagger": "^7.4.2",
     "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
     "reflect-metadata": "^0.2.0",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.0.0",
