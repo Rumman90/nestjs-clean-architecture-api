@@ -227,4 +227,4 @@ Before using the same idea in a real service, add the missing parts for your pro
 
 ## License
 
-MIT
+This project is licensed under the [MIT License](LICENSE).
